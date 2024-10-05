@@ -18,17 +18,20 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
 >  5. The MFCCs are the amplitudes of the resulting spectrum.
 
 ## MLP
-Accuracy on test set: 0,6091455221176147
-
+Accuracy on test set (50 epochs): 0,6091455221176147
 ![Plot](figures/MLP.png)
 
 ## CNN
-Accuracy on test set:
-Plots:
+Accuracy on test set (50 epochs): 0,7571356892585754
+![Plot](figures/CNN.png)
+
+
+Accuracy on test set (500 epochs): 0,7671507000923157
+![Plot](figures/CNN_500.png)
 
 ## RNN-LSTM
-Accuracy on test set:
-Plots:
+Accuracy on test set (50 epochs): 0,6659989953041077
+![Plot](figures/RNN_LSTM.png)
 
 ## References
 [Deep Learning (for Audio) with Python](https://youtube.com/playlist?list=PL-wATfeyAMNrtbkCNsLcpoAyBBRJZVlnf&si=n75apVs848NUcqYI) — Valerio Velardo - The Sound of AI
