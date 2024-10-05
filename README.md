@@ -40,18 +40,18 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum):
 
 ### Multi-Layer Perceptron (MLP)
 - **Accuracy on Test Set (50 epochs)**: 0.6091
-- ![Plot](figures/MLP.png)
+  ![Plot](figures/MLP.png)
 
 ### Convolutional Neural Network (CNN)
 - **Accuracy on Test Set (50 epochs)**: 0.7571
-- ![Plot](figures/CNN.png)
+  ![Plot](figures/CNN.png)
 
 - **Accuracy on Test Set (500 epochs)**: 0.7671
-- ![Plot](figures/CNN_500.png)
+  ![Plot](figures/CNN_500.png)
 
 ### Recurrent Neural Network - Long Short-Term Memory (RNN-LSTM)
 - **Accuracy on Test Set (50 epochs)**: 0.6660
-- ![Plot](figures/RNN_LSTM.png)
+  ![Plot](figures/RNN_LSTM.png)
 
 ## Results
 
