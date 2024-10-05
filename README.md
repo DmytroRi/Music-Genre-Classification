@@ -18,9 +18,9 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
 >  5. The MFCCs are the amplitudes of the resulting spectrum.
 
 ## MLP
-Accuracy on test set: 6091455221176147
+Accuracy on test set: 0,6091455221176147
 
-[Plot](https://github.com/DmytroRi/Music-Genre-Classification/blob/main/figures/MLP.png)
+[Plot](figures/MLP.png)
 
 ## CNN
 Accuracy on test set:
