@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 from collections import Counter
 
 ALL_GENRES = ["blues", "classical", "country", "disco", "hip-hop", "jazz", "metal", "pop", "reggae", "rock"]
-PATH_TO_WAV = "test_music/Pantera__Walk.wav"#"enter/your/path/to/audio"
+PATH_TO_WAV = "enter/your/path/to/audio"
 SAMPLE_RATE = 25050
-SEGMENT_DURATION = 6  # Duration of each segment in seconds (as used in training)
+SEGMENT_DURATION = 6  # Duration of each segment in seconds 
 NUM_SEGMENTS = 1000  # Number of segments to extract
 
 def get_mfccs (path_to_music, n_fft = 2048, n_mfcc = 13, hop_length = 512):
@@ -27,7 +27,9 @@ def get_mfccs (path_to_music, n_fft = 2048, n_mfcc = 13, hop_length = 512):
     # Shuffle the segments to get different parts of the song for analysis
     np.random.shuffle(segments)    
 
+     # Determine the number of segments to process
     num_segments_to_process = min(NUM_SEGMENTS, len(segments))
+    
     # Initialize an array to store MFCCs of fixed shape (num_segments_to_process, 130, 13)
     mfccs_array = np.empty((num_segments_to_process, 130, 13))
     
@@ -38,11 +40,17 @@ def get_mfccs (path_to_music, n_fft = 2048, n_mfcc = 13, hop_length = 512):
                                     n_fft = n_fft,
                                     n_mfcc = n_mfcc,
                                     hop_length = hop_length)
+        
+        # Transpose to match the shape (frames, n_mfcc)
         mfcc = mfcc.T
+
+        # Pad or trim MFCCs to ensure a fixed length of 130 frames
         if mfcc.shape[0] < 130:
             mfcc_padded = np.pad(mfcc, ((0, 130 - mfcc.shape[0]), (0, 0)), mode='constant')
         else:
             mfcc_padded = mfcc[:130, :]
+
+        # Assign to the array
         mfccs_array[i] = mfcc_padded
     
     return mfccs_array
@@ -57,6 +65,7 @@ def plot_array(array):
 
     # Prepare data for the plot
     counts = [genre_counts.get(genre, 0) for genre in ALL_GENRES]
+    
     # Plot the data
     plt.figure(figsize=(10, 6))
     plt.bar(ALL_GENRES, counts, color='skyblue')
@@ -71,11 +80,13 @@ def plot_array(array):
     plt.show()
 
 if __name__ == "__main__":
+    # Extract MFCCs from the audio file
     mfccs_inputs = get_mfccs(PATH_TO_WAV)
 
+    # Load the model
     model = tf.keras.models.load_model('saved_models/GenreClassification_CNN.keras')
-    #model = tf.keras.models.load_model('saved_models/GenreClassification_MLP.keras')
-    #model = tf.keras.models.load_model('saved_models/GenreClassification_RNN_LSTM.keras')
+
+    # Predict genres for each segment
     predictions_list = []
     for mfcc_segment in mfccs_inputs:
         mfcc_segment = mfcc_segment[np.newaxis, ...]  # Adds batch dimension -> (1, 130, 13, 1)
@@ -84,5 +95,6 @@ if __name__ == "__main__":
         predicted_genre = decode_genre(genre_index[0])
         predictions_list.append(predicted_genre)
 
+    # Print and plot the predictions
     print(predictions_list)
     plot_array(predictions_list)
