@@ -20,7 +20,7 @@ From [Wikipedia](https://en.wikipedia.org/wiki/Mel-frequency_cepstrum)
 ## MLP
 Accuracy on test set: 0,6091455221176147
 
-[Plot](figures/MLP.png)
+![Plot](figures/MLP.png)
 
 ## CNN
 Accuracy on test set:
