@@ -33,6 +33,10 @@ Accuracy on test set (500 epochs): 0,7671507000923157
 Accuracy on test set (50 epochs): 0,6659989953041077
 ![Plot](figures/RNN_LSTM.png)
 
+## Results
+![Pic](results/cnn/AntonioVivaldi__TheFourSeasonsNo4TheWinter.png)
+![Pic](results/cnn/Strauss__ThusSpokeZarathustra.png)
+
 ## References
 [Deep Learning (for Audio) with Python](https://youtube.com/playlist?list=PL-wATfeyAMNrtbkCNsLcpoAyBBRJZVlnf&si=n75apVs848NUcqYI) — Valerio Velardo - The Sound of AI
 
