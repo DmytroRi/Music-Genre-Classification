@@ -35,6 +35,8 @@ Accuracy on test set (50 epochs): 0,6659989953041077
 
 ## Results
 ![Pic](results/cnn/AntonioVivaldi__TheFourSeasonsNo4TheWinter.png)
+
+
 ![Pic](results/cnn/Strauss__ThusSpokeZarathustra.png)
 
 ## References
