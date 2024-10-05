@@ -34,10 +34,31 @@ Accuracy on test set (50 epochs): 0,6659989953041077
 ![Plot](figures/RNN_LSTM.png)
 
 ## Results
+Histograms show how many segments of the song were identified as which genre. Also check sub-directory "bloopers" for incorrect outputs.
+
 ![Pic](results/cnn/AntonioVivaldi__TheFourSeasonsNo4TheWinter.png)
 
 
 ![Pic](results/cnn/Strauss__ThusSpokeZarathustra.png)
+
+
+![Pic](results/cnn/JohnnyCash__Hurt.png)
+
+
+![Pic](results/cnn/BobMarley__ThreeLittleBirds.png)
+
+
+![Pic](results/cnn/Eminem__WithoutMe.png)
+
+
+![Pic](results/cnn/MichaelJackson__BeatIt.png)
+
+
+![Pic](results/cnn/TheBeatles__LetItBe.png)
+
+
+![Pic](results/cnn/GunsNRoses__WelcomeToTheJungle.png)
+
 
 ## References
 [Deep Learning (for Audio) with Python](https://youtube.com/playlist?list=PL-wATfeyAMNrtbkCNsLcpoAyBBRJZVlnf&si=n75apVs848NUcqYI) — Valerio Velardo - The Sound of AI
